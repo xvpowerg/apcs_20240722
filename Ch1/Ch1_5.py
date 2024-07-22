@@ -1,0 +1,14 @@
+a = 9
+b = 2
+ans = a + b
+print(a,"+",b,"=",ans)
+ans = a - b
+print(a,"-",b,"=",ans)
+ans = a * b
+print(a,"*",b,"=",ans)
+ans = a / b
+print(a,"/",b,"=",ans)
+ans = a // b#無條件捨去
+print(a,"//",b,"=",ans)
+ans = a % b#取餘數
+print(a,"%",b,"=",ans)
