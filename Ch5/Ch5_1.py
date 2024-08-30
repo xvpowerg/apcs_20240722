@@ -1,15 +1,22 @@
-height = float(input('請輸入身高，單位為公分: '))
-weight = int(input('請輸入體重，單位為公斤: '))
-bmi = weight/((height/100)**2)
-print(f"bmi:{bmi:.2f} 判定結果: ", end='')
+def rotate(matrixA):
+    matrixB = []
+    r = len(matrixA)
+    c = len(matrixA[0])
+    for i in range(c):
+        row = []
+        for j in range(r-1, -1, -1):
+            row.append(matrixA[j][i]) #colum不變 row由最後一筆開始往上
+        matrixB.append(row)
+    return matrixB
 
-if(bmi>30):
-    print('肥胖')
-elif(bmi>25):
-    print('過重')
-elif(bmi>18.5):
-    print('正常')
-elif(bmi>0):
-    print('過輕')
-else:
-    print('數值錯誤')
+def printMatrix(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            print(matrix[i][j], end=' ')
+        print()
+
+m1 = [[3,6],[2,5],[1,4]]
+m2 = rotate(m1)
+printMatrix(m1)
+print('旋轉後...')
+printMatrix(m2)

@@ -1,17 +1,7 @@
-x1,x2 = (3,5)
-print(x1,x2)
-
-y = 10
-x = 20
-print("y=",y,"x=",x)
-temp = y
-y = x
-x = temp
-print("y=",y,"x=",x)
-print("====================")
-a = 25
-b = 77
-print("a=",a,"b=",b)
-a,b=b,a
-print("a=",a,"b=",b)
-
+for i in range(1,7):
+    for j in range(1,7):
+        for k in range(1,7):
+            for l in range(1,7):
+                if i < j and j < k and k <l:
+                    print(f"{i}{j}{k}{l}")
+    
